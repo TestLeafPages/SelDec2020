@@ -1,0 +1,151 @@
+Relative Xpath
+============
+Attribute Based Xpath:
+==================
+//tagName[@attributeName='<attribute_value']
+//input[@id='username']
+
+Multiple Attributes:
+===============
+//tagName[@attribute1='<attribute1_value'][@attribute2='attribute2_value']
+
+//input[@class='inputLogin'][@type='password']
+	or
+
+//input[@class='inputLogin' and @type='password123']
+//input[@class='inputLogin' or @type='password123']
+
+text based xpath:
+==============
+//tagName[text()='text_value']
+//h2[text()='Leaftaps Login']
+
+Partial Match xpath:
+================
+//tagName[contains(@attribute,'partial value')]
+
+//tagName[contains(text(),'partial text')]
+
+//h2[contains(text(),'Leaftaps')]
+
+//input[contains(@name,'USER')]
+
+Collection Based Xpath
+==================
+(xpath)[index]
+
+(//input)[2]
+
+(//input[@class='inputLogin'])[2]
+
+
+Advanced Xpath / Axes Based / Relationship Based xpath
+============================================
+Parent to Child:
+=============
+parent xpath/tagName of child
+
+//form[@id='login']/p[@class='top']
+
+Child to Parent:
+============
+child xpath/parent::tagName of parent
+
+//label[text()='Password']/parent::p
+
+child xpath/..
+//label[text()='Password']/..
+
+GrandParent to GrandChild
+======================
+GrandParent xpath//tagName of GrandChild
+//form[@id='login']//label[text()='Username']
+(//form[@id='login']//label)[2]
+
+GrandChild to GrandParent:
+======================
+GrandChild xpath/ancestor::tagName of GrandParent
+//input[@id='username']/ancestor::form
+
+Elder Sibling to Younger Sibling:
+==========================
+Elder sibling xpath/following-sibling::tagName of Younger sibling
+
+//label[text()='Username']/following-sibling::input
+
+Younger-sibling to Elder Sibling:
+==========================
+Younger sibling xpath/preceding-sibling::tagName of elder sibling
+
+//input[@id='password']/preceding-sibling::label
+
+Elder Cousin to Younger Cousin:
+==========================
+elder cousin xpath/following::tagName of younger cousin
+
+//label[text()='Username']/following::label
+
+
+Younger Cousin to Elder Cousin:
+==========================
+younger cousin xpath/preceding::tagName of Elder cousin
+
+//label[text()='Password']/preceding::input
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,7 @@
 package week2.day1;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -59,7 +61,13 @@ public class LearnDropDown {
 		
 		WebElement marketing = driver.findElementById("createLeadForm_marketingCampaignId");
 		Select dd1 = new Select(marketing);
-		dd1.selectByVisibleText("Car and Driver");
+		
+		List<WebElement> allOptions = dd1.getOptions();
+		int count = allOptions.size();
+		
+		allOptions.get(count-1).click();
+		
+		//dd1.selectByVisibleText("Car and Driver");
 		
 		
 		

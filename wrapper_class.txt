@@ -1,0 +1,10 @@
+Primitive Type	Wrapper Class
+=============	===============
+boolean		Boolean
+char		Character
+byte		Byte
+short		Short
+int		Integer
+long		Long
+float		Float
+double		Double
